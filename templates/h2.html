@@ -8,10 +8,18 @@
 </head>
 <body>
     <center>
-        {% if a < b %}
-            <h2>{{a}}</h2>
+        {% if a > b %}
+            {% if a > c %}
+              <h2>a is greater</h2>
+            {% else %} 
+                <h2>c is greater</h2> 
+            {% endif %}
         {% else %}
-            {{b}}
+            {% if b > c %}
+                <h2>b is greater</h2> 
+            {% else %}
+                <h2>c is greater</h2>  
+            {% endif %}             
         {% endif %}
 
     </center>
